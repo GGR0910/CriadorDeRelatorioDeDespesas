@@ -65,27 +65,19 @@ namespace ExpensesReport.Interactions
             {
                 switch (reportType)
                 {
-                    case (int)ReportTypeEnum.ExpensesReportByCategories:
-                        Console.WriteLine("Chamando relatório por categorias...");
-                        ExpensesReportByCategories.StartProcess(archivePath);
+                    case (int)ReportTypeEnum.MonthExpensesReport:
+                        Console.WriteLine("Chamando relatório de gastos do mês...");
+                        MonthExpensesReport.RunProcess(archivePath);
                         break;
                 }
             }
-            catch (FileNotFoundException ex)
+            catch (Exception ex)
             {
                 Console.WriteLine($"Erro ao chamar o processo de relatório: {ex.Message}");
                 string newArchivePath = GetArchivePath();
                 Console.Clear();
                 CallReportProcess(reportType, newArchivePath);
             }
-            catch (FormatException ex)
-            {
-                Console.WriteLine($"Erro ao chamar o processo de relatório: {ex.Message}");
-                string newArchivePath = GetArchivePath();
-                Console.Clear();
-                CallReportProcess(reportType, newArchivePath);
-            }
-           
 
         }
     }

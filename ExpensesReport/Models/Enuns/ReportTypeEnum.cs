@@ -8,10 +8,7 @@ namespace ExpensesReport.Models.Enuns
 {
     public enum ReportTypeEnum
     {
-        ExpensesReportByCategories = 1,
-        ExpensesReportByItem = 2,
-        ExpensesReportByDate= 3,
-        ExpensesReportBySemester = 4,
-        ExpensesReportByYear = 5,
+        MonthExpensesReport = 1,
+        SemesterExpensesReport = 2
     }
 }

@@ -10,6 +10,12 @@
   <ItemGroup>
     <Folder Include="Context\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="Templates\" />
+    <Folder Include="Utils\EmailWorker\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EPPlus" Version="7.1.3" />
   </ItemGroup>
 
 </Project>

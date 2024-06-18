@@ -1,6 +1,5 @@
 ﻿using ExpensesReport.Models.Enuns;
 using ExpensesReport.Processes;
-using ExpensesReport.Services.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,11 +13,7 @@ namespace ExpensesReport.Interactions
         public static void ShowMenuOptions()
         {
 
-            var menuOptions = MenuOptionsService.GetAll();
-            foreach (var menuOption in menuOptions)
-            {
-                Console.WriteLine($"{menuOption.Text} - {menuOption.Description}");
-            }
+            Console.WriteLine("1-Gastos por mês.");
             GetOption();
            
         }
@@ -66,6 +61,7 @@ namespace ExpensesReport.Interactions
                 switch (reportType)
                 {
                     case (int)ReportTypeEnum.MonthExpensesReport:
+                        Console.WriteLine("Lembre de mandar um relatório com Data, Categoria, Valor, FormaPagamento, Reembolso e Item como colunas.");
                         Console.WriteLine("Chamando relatório de gastos do mês...");
                         MonthExpensesReport.RunProcess(archivePath);
                         break;

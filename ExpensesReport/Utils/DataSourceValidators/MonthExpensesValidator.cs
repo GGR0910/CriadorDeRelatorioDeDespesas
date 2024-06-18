@@ -20,7 +20,7 @@ namespace ExpensesReport.Utils.DataSourceValidators
                 for(int i = 1; i <= 6; i++)
                 {
                     if(!Processes.MonthExpensesReport.AcceptedColumns.Contains(worksheet.Cells[1, i].Value))
-                        throw new FormatException("Colunas inválidas no arquivo de despesas.");
+                        throw new FormatException($"Coluna {worksheet.Cells[1, i].Value} inválida.");
                 }
 
                 for(int i = 2; i <= worksheet.Rows.Count(); i++)

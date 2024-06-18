@@ -8,10 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Context\" />
     <Folder Include="Interfaces\" />
-    <Folder Include="Templates\" />
-    <Folder Include="Utils\EmailWorker\" />
   </ItemGroup>
 
   <ItemGroup>
